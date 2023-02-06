@@ -1,0 +1,486 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+<html>
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="ThemeMarch">
+	<!-- Page Title -->
+	<title>Veril - Construction and Industrial HTML Template</title>
+  <!-- Favicon Icon -->
+	<link rel="icon" href="{% static 'img/favicon.png'%}">
+	<!-- Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/icofont.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/fontawesome.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/owl.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/modal.video.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/slick.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<link id="theme" rel="stylesheet" href="{% static 'css/color/color1.css'%}">
+</head>
+
+<body>
+  <!-- Start Preloader -->
+  <div id="tm-preloader">
+    <div id="tm-status">
+      <div class="tm-spinner">
+        <div class="tm-rect1"></div>
+        <div class="tm-rect2"></div>
+        <div class="tm-rect3"></div>
+        <div class="tm-rect4"></div>
+        <div class="tm-rect5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End Preloader -->
+  
+  <!-- Start Site Header Wrap -->
+  <header class="tm-site-header">
+  	<div class="tm-hero-social-area tm-style2">
+  		<div class="container">
+  			<div class="tm-hero-social">
+	  			<a href="#">
+	  				<i class="fa fa-facebook"></i>
+	  				<i class="fa fa-facebook"></i>
+	  			</a>
+	  			<a href="#">
+	  				<i class="fa fa-twitter"></i>
+	  				<i class="fa fa-twitter"></i>
+	  			</a>
+	  			<a href="#">
+	  				<i class="fa fa-pinterest-p"></i>
+	  				<i class="fa fa-pinterest-p"></i>
+	  			</a>
+	  			<a href="#">
+	  				<i class="fa fa-linkedin"></i>
+	  				<i class="fa fa-linkedin"></i>
+	  			</a>
+	  			<a href="#">
+	  				<i class="fa fa-google-plus"></i>
+	  				<i class="fa fa-google-plus"></i>
+	  			</a>
+	  		</div>
+  		</div>
+  	</div>
+    <div class="tm-header-menu">
+      <div class="container tm-header-menu-container">
+      	<div class="tm-header-container-in">
+      		<div class="tm-site-branding">
+	          <!-- For Image Logo -->
+	          <a href="index.html" class="tm-logo-link">
+	            <img src="{% static 'img/logo4walls.jpg'%}" alt="" class="tm-logo">
+	          </a>
+	          <!-- For Site Title -->
+	          <!-- <span class="tm-site-title">
+	          	<a href="index.html">Veril</a>
+	          </span> -->
+	        </div>
+	        <nav class="tm-primary-nav tm-section-active">
+	          <ul class="tm-primary-nav-list">
+              <li class="menu-item menu-item-has-children"><a href="/home">Home</a>
+                {% comment %} <ul>
+                  <li class="menu-item"><a href="index.html">Home One</a></li>
+                  <li class="menu-item"><a href="index1.html">Home Two</a></li>
+                  <li class="menu-item"><a href="index2.html">Home Three</a></li>
+                  <li class="menu-item"><a href="index3.html">Home Four</a></li>
+                </ul> {% endcomment %}
+              </li>
+              <li class="menu-item menu-item-has-children"><a href="/about">About</a>
+                {% comment %} <ul>
+                  <li class="menu-item"><a href="about1.html">About One</a></li>
+                  <li class="menu-item"><a href="about2.html">About Two</a></li>
+                </ul> {% endcomment %}
+              </li>
+              <li class="menu-item current-menu-item menu-item-has-children"><a href="/services">Service</a>
+                {% comment %} <ul>
+                  <li class="menu-item"><a href="service1.html">Service One</a></li>
+                  <li class="menu-item"><a href="service2.html">Service Two</a></li>
+                </ul> {% endcomment %}
+              </li>
+              {% comment %} <li class="menu-item menu-item-has-children"><a href="#">Porject</a>
+                <ul>
+                  <li class="menu-item"><a href="projects1.html">Porject One</a></li>
+                  <li class="menu-item"><a href="projects2.html">Porject Two</a></li>
+                </ul>
+              </li>
+              <li class="menu-item"><a href="team.html">Team</a></li>
+              <li class="menu-item menu-item-has-children"><a href="#">Blog</a>
+                <ul>
+                  <li class="menu-item"><a href="blog-right-sidebar.html">Blog right Sidebar</a></li>
+                  <li class="menu-item"><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                  <li class="menu-item"><a href="blog-massonry-view.html">Blog Massonry View</a></li>
+                  <li class="menu-item"><a href="blog-grid-view.html">Blog Grid View</a></li>
+                  <li class="menu-item"><a href="single-blog.html">Single Blog</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item-has-children"><a href="#">Pages</a>
+                <ul>
+                  <li class="menu-item"><a href="404.html">404 Page</a></li>
+                  <li class="menu-item"><a href="faq.html">FAQ Page</a></li>
+                  <li class="menu-item"><a href="commingsoon.html">Comming Soon Page</a></li>
+                </ul>
+              </li> {% endcomment %}
+              <li class="menu-item menu-item-has-children"><a href="/contact">Contact</a>
+                {% comment %} <ul>
+                  <li class="menu-item"><a href="contact.html">Contact One</a></li>
+                  <li class="menu-item"><a href="contact1.html">Contact Two</a></li>
+                </ul> {% endcomment %}
+              </li>
+            </ul>
+	          <div class="tm-hero-search-btn">
+	          	<i class="icofont-search-2"></i>
+	          </div>
+	          <div class="tm-main-search">
+	          	<form action="#">
+	          		<input type="text" placeholder="Search...">
+	          		<span class="tm-cross"><i class="icofont-close-line"></i></span>
+	          	</form>
+	          </div>
+	        </nav>
+      	</div>
+      </div><!-- .tm-header-menu-container -->
+    </div><!-- .tm-header-menu -->
+  </header><!-- .tm-site-header -->
+
+	<!-- Start Hero Section -->
+	<section class="tm-page-header tm-bg" data-src="{% static 'img/abouthead.jpg'%}">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="tm-page-header-text">
+						<h1>Our Service</h1>
+						<ul class="tm-breadcam">
+							<li><a href="index.html">Home</a></li>
+							<li>Service 01</li>
+						</ul>
+					</div>
+				</div><!-- .col -->
+			</div>
+		</div>
+	</section>
+  <!-- End Hero Section -->
+
+  <!-- Start Featured Service -->
+  <section class="tm-featured-service">
+    <div class="empty-space col-md-b100 col-xs-b65"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-xl-4">
+          <div class="tm-about tm-style3">
+            <div class="tm-about-text">
+              <h2><span>Featured</span> Service</h2>
+              <h3>Industry is older than modern. Over time, the methods used.</h3>
+              <p>Our team at 4walls Estimating has developed a refined working with our more than five years in business. This “mixed-blend” is defined by integrity, hard work, and dedication.</p>
+            </div>
+          </div>
+        </div><!-- .col -->
+        <div class="col-md-6  col-xl-4">
+          <div class="tm-service tm-style1 text-center">
+            <div class="tm-tm-service-in">
+              <div class="tm-service-bg tm-bg" data-src="{% static 'img/server-bg.jpg'%}" style="background-image: url(&quot;{% static 'img/server-bg.jpg'%}&quot;);"></div>
+              <div class="tm-service-logo"><i class="icofont-engineer"></i></div>
+              <h3 class="tm-service-heading">Fast Turnaround</h3>
+              <div class="tm-sample-text">Our fast turnaround time gives you more time before the bid date to study the estimate and compare it with the quotes you have received from subcontractors/suppliers.</div>
+            </div>
+          </div>
+        </div><!-- .col -->
+        <div class="col-md-6  col-xl-4">
+          <div class="tm-service tm-style1 text-center">
+            <div class="tm-tm-service-in">
+              <div class="tm-service-bg tm-bg" data-src="{% static 'img/project01.jpg'%}" style="background-image: url(&quot;{% static 'img/server-bg.jpg'%}&quot;);"></div>
+              <div class="tm-service-logo"><i class="icofont-architecture"></i></div>
+              <h3 class="tm-service-heading">Technical Support</h3>
+              <div class="tm-sample-text">Our team is ready to answer your queries, just schedule a time and discuss it with our estimators.</div>
+            </div>
+          </div>
+        </div><!-- .col -->
+      </div>
+    </div>
+    <div class="empty-space col-md-b100 col-xs-b65"></div>
+  </section>
+  <!-- End Featured Service -->
+
+  <!-- Start General Service -->
+  <section class="tm-gray-bg tm-service-wrap">
+    <div class="empty-space col-md-b100 col-xs-b65"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tm-section-heading tm-style1 text-center">
+            <h2>SERVICES</h2>
+            <div class="tm-section-separator">
+              <span class="tm-left-bar"></span>
+              <i class="icofont-industries"></i>
+              <span class="tm-right-bar"></span>
+            </div>
+            <div class="empty-space col-md-b15 col-xs-b15"></div>
+            <p>This is our service which we provide for you, take a look and tell us how we can help to make your project success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="tm-service tm-style1">
+						<div class="tm-tm-service-in">
+							<div class="tm-service-logo"><i class="icofont-engineer"></i></div>
+              <h3 class="tm-service-heading">Engineering</h3>
+							<div class="tm-sample-text">Provide Engineering Services</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-4 col-md-6">
+					<div class="tm-service tm-style1">
+						<div class="tm-tm-service-in">
+							<div class="tm-service-logo"><i class="icofont-architecture"></i></div>
+							<h3 class="tm-service-heading">Architecture</h3>
+							<div class="tm-sample-text">Designing of a Beautiful Architecture</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-4 col-md-6">
+					<div class="tm-service tm-style1">
+						<div class="tm-tm-service-in">
+							<div class="tm-service-logo"><i class="icofont-recycle-alt"></i></div>
+							<h3 class="tm-service-heading">Residential Projects</h3>
+							<div class="tm-sample-text">Estimation of Residential Projects</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-4 col-md-6">
+					<div class="tm-service tm-style1">
+						<div class="tm-tm-service-in">
+							<div class="tm-service-logo"><i class="icofont-vehicle-crane"></i></div>
+							<h3 class="tm-service-heading">Comercial Projects</h3>
+							<div class="tm-sample-text">Estimation of Commercial Projects</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-4 col-md-6">
+					<div class="tm-service tm-style1">
+						<div class="tm-tm-service-in">
+							<div class="tm-service-logo"><i class="icofont-vehicle-excavator"></i></div>
+							<h3 class="tm-service-heading">Roof TakeOff</h3>
+							<div class="tm-sample-text">Provide best solution for Roof Takeoff</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-4 col-md-6">
+					<div class="tm-service tm-style1">
+						<div class="tm-tm-service-in">
+							<div class="tm-service-logo"><i class="icofont-vehicle-wrecking"></i></div>
+							<h3 class="tm-service-heading">Diversified</h3>
+							<div class="tm-sample-text">Handlling all type of work</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div>
+    <div class="empty-space col-md-b100 col-xs-b65"></div>
+  </section>
+  <!-- End General Service -->
+
+  <!-- Start Featured Section -->
+  <section class="tm-quotation-wrap">
+    <div class="tm-quootation-bg tm-bg" data-src="{% static 'img/serop.jpg'%}">
+      <div class="tm-quootation-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="tm-quotation-in">
+        <div class="tm-quotation-heading">
+          <h2><span>Custom</span> Quotation</h2>
+          {% comment %} <p>Lorem Ipsum is simply dummy text of the prin ting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it.</p> {% endcomment %}
+        </div>
+        <form action="assets/php/mail.php" class="tm-quotation-form" method="post" id="contact-form">
+          <div id="tm-alert"></div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="tm-form-field">
+                <input type="text" id="name" name="name" placeholder="Name*">
+              </div>
+              <div class="tm-form-field">
+                <input type="text" id="subject" name="subject" placeholder="Subject*">
+              </div>
+              <div class="tm-form-field">
+                <input type="email" id="email" name="email" placeholder="Email*">
+              </div>
+            </div><!-- .col -->
+            <div class="col-lg-6">
+              <div class="tm-form-field">
+                <textarea cols="30" rows="10" id="msg" name="msg" placeholder="Message"></textarea>
+              </div>
+              <div class="tm-form-field">
+                <button class="tm-btn tm-color1" type="submit" id="submit" name="submit">
+                  <span>Purchase Now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div><!-- .tm-quotation-in -->
+    </div>
+  </section>
+  <!-- End Featured Section -->
+
+  <!-- Start FAQ Section -->
+  <section class="tm-faq-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="tm-faq-img tm-bg" data-src="{% static 'img/servpo.jpg'%}"></div>
+        </div><!-- .col -->
+        <div class="col-lg-6">
+          <div class="empty-space col-md-b100 col-xs-b65"></div>
+          <div class="tm-faq-heading">
+              <h2><span>Frequently</span> Ask Question</h2>
+              <h3>Our Clients Ask Certain Queries</h3>
+            </div>
+          <div class="accordian-wrapper">
+            <div class="single-accordian">
+              <h3 class="accordian-head">What is 4Walls Estimation?</h3>
+              <div class="accordian-body">
+                This is a construction estimation calculating company based in California, United States
+              </div>
+            </div><!-- .single-accordian -->
+            <div class="single-accordian">
+              <h3 class="accordian-head">What is the our work?</h3>
+              <div class="accordian-body">
+                To Provide Competitive Estimation of the Construction Projects 
+              </div>
+            </div><!-- .single-accordian -->
+            <div class="single-accordian">
+              <h3 class="accordian-head">How do I make a perfect estimation bids?</h3>
+              <div class="accordian-body">
+                Our Company has professional estimation engineers who can bid best
+              </div>
+            </div><!-- .single-accordian -->
+          </div>
+          <div class="empty-space col-md-b100 col-xs-b65"></div>
+        </div><!-- .col -->
+      </div>
+    </div>
+  </section>
+  <!-- End FAQ Section -->
+  
+
+  <!-- Start Footer Section -->
+  <footer class="tm-site-footer">
+    <div class="tm-main-footer tm-bg" data-src="{% static 'img/footer-bg.jpg'%}">
+      <div class="empty-space col-md-b100 col-xs-b65"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="tm-footer-widget tm-text-widget">
+              <div class="tm-footer-logo">
+                <a href="#"><img src="{% static 'img/logo4walls.jpg'%}" alt="Veril"></a>
+              </div>
+              <div class="tm-footer-text-widget">
+                {% comment %} consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <div class="tm-footer-readmore-btn">
+                  <a href="#" class="readmore-btn">
+                    Read More
+                    <span class="tm-readmore-icon">
+                      <i class="icofont icofont-bubble-right"></i>
+                      <i class="icofont icofont-bubble-right"></i>
+                    </span>
+                  </a>
+                </div> {% endcomment %}
+              </div>
+              {% comment %} <div class="tm-subscribe">
+                <form class="mailchimp subscribe-form" action="#">
+                  <input type="email" name="subscribe" id="subscriber-email" placeholder="Subscribe here">
+                  <button type="submit" id="subscribe-button" class="tm-subscribe-btn"><i class="fa fa-paper-plane-o"></i></button>
+                  <h5 class="subscription-success"> .</h5>
+                  <h5 class="subscription-error"> .</h5>
+                  <label class="subscription-label" for="subscriber-email"></label>
+                </form>
+              </div> {% endcomment %}
+            </div>
+            <div class="empty-space col-md-b40 col-xs-b40"></div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="tm-footer-widget tm-footer-location-widget">
+              <h2 class="tm-footer-widget-title">Contuct Us</h2>
+              <ul>
+                <li><i class="icofont-location-pin"></i>11001 14th Street Ave <br>
+                  San Francisco, CA
+                </li>
+                <li><i class="icofont-envelope"></i>jacob@4wallsestimator.info <br>
+                    {% comment %} Skype: example {% endcomment %}
+                </li>
+                <li><i class="icofont-phone"></i>+1 (470) 482 8080 <br>
+                    {% comment %} 1-800-915-6271 {% endcomment %}
+                </li>
+              </ul>
+            </div>
+            <div class="empty-space col-md-b40 col-xs-b40"></div>
+          </div>
+          {% comment %} <div class="col-lg-3 col-md-6">
+            <div class="tm-footer-widget tm-footer-link-widget">
+              <h2 class="tm-footer-widget-title">Service</h2>
+              <ul>
+                <li><i class="icofont-thin-double-right"></i><a href="#">Pre-construction services</a></li>
+                <li><i class="icofont-thin-double-right"></i><a href="#">Road construction</a></li>
+                <li><i class="icofont-thin-double-right"></i><a href="#">Construction management</a></li>
+                <li><i class="icofont-thin-double-right"></i><a href="#">Construction in progress</a></li>
+                <li><i class="icofont-thin-double-right"></i><a href="#">General services</a></li>
+                <li><i class="icofont-thin-double-right"></i><a href="#">Civil construction services</a></li>
+              </ul>
+            </div>
+            <div class="empty-space col-md-b40 col-xs-b40"></div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="tm-footer-widget tm-recent-project-widget">
+              <h2 class="tm-footer-widget-title">Project</h2>
+              <ul>
+                <li><a href="#"><img src="assets/img/rp01.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/rp02.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/rp03.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/rp04.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/rp05.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/rp06.jpg" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="empty-space col-md-b40 col-xs-b40"></div>
+          </div> {% endcomment %}
+        </div>
+      </div><!-- .container -->
+      <div class="empty-space col-md-b60 col-xs-b25"></div>
+    </div>
+    <div class="tm-copyride">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            © 2020. Designed by <a href="#">PYRAMID TECHNOLOGIES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+	<!-- Scroll Up -->
+  <div id='scrollup'><i class="fa fa-angle-double-up"></i></div>
+
+  <script src={% static 'js/vendor/modernizr-3.5.0.min.js'%}></script>
+	<script src={% static 'js/vendor/jquery-1.12.4.min.js'%}></script>
+    <script src={% static 'js/smoothScroll.min.js'%}></script>
+    <script src={% static 'js/jQuery.easing.min.js'%}></script>
+    <script src={% static 'js/wow.min.js'%}></script>
+    <script src={% static 'js/mailchimp.min.js'%}></script>
+	<script src={% static 'js/owl.min.js'%}></script>
+    <script src={% static 'js/isotope.min.js'%}></script>
+    <script src={% static 'js/tamjid-counter.min.js'%}></script>
+    <script src={% static 'js/YTPlayer.min.js'%}></script>
+    <script src={% static 'js/parallax.min.js'%}></script>
+	<script src={% static 'js/main.js'%}></script>
+</body>
+</html>

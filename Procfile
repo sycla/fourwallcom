@@ -1,0 +1,1 @@
+web: gunicorn fourwalls.wsgi:application --log-file -
